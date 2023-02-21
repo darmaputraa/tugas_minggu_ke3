@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+import 'package:badges/badges.dart' as badges;
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        body: Container(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                badges.Badge(
+                  showBadge: true,
+                  badgeStyle: badges.BadgeStyle(
+                      shape: badges.BadgeShape.square,
+                      borderRadius: BorderRadius.circular(30),
+                      badgeColor: Colors.purple,
+                      padding: EdgeInsets.all(15)),
+                  position: badges.BadgePosition.center(),
+                  badgeContent: Text(
+                    'BADGE',
+                    style: TextStyle(fontSize: 30, color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                badges.Badge(
+                  showBadge: true,
+                  badgeStyle: badges.BadgeStyle(
+                      shape: badges.BadgeShape.square,
+                      borderRadius: BorderRadius.circular(30),
+                      badgeColor: Colors.purple,
+                      padding: EdgeInsets.all(8)),
+                  position: badges.BadgePosition.center(),
+                  badgeContent: Text(
+                    'BADGE',
+                    style: TextStyle(fontSize: 30, color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+}
