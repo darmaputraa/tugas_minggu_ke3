@@ -26,30 +26,54 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            const SizedBox(height: 40),
-            Flexible(
+            Container(
+                margin: const EdgeInsets.all(36.0),
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.blueAccent),
+                ),
                 child: BarcodeWidget(
-              barcode: Barcode.code128(escapes: true),
-              data: "Alterra Academy",
-              width: 300,
-              height: 100,
-            )),
-            const SizedBox(height: 40),
-            Flexible(
+                  barcode: Barcode.code128(escapes: true),
+                  data: "Alterra Academy",
+                  style: const TextStyle(
+                      letterSpacing: 3,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
+                  width: 300,
+                  height: 100,
+                )),
+            Container(
+                margin: const EdgeInsets.all(36.0),
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.blueAccent),
+                ),
                 child: BarcodeWidget(
-              barcode: Barcode.code128(escapes: true),
-              data: "Flutter Asik",
-              width: 300,
-              height: 100,
-            )),
-            const SizedBox(height: 40),
-            Flexible(
+                  barcode: Barcode.code128(escapes: true),
+                  data: "Flutter Asik",
+                  style: const TextStyle(
+                      letterSpacing: 3,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
+                  width: 300,
+                  height: 100,
+                )),
+            Container(
+                margin: const EdgeInsets.all(36.0),
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.blueAccent),
+                ),
                 child: BarcodeWidget(
-              barcode: Barcode.code128(escapes: true),
-              data: "Irvan Darma Putra",
-              width: 300,
-              height: 100,
-            )),
+                  barcode: Barcode.code128(escapes: true),
+                  data: "Irvan Darma Putra",
+                  style: const TextStyle(
+                      letterSpacing: 3,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
+                  width: 300,
+                  height: 100,
+                )),
           ],
         ),
       ),
